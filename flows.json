@@ -12,7 +12,7 @@
         "name": "Events/Communications from Incuhive",
         "tab": "d05445e29cdd76aa",
         "order": 1,
-        "disp": true,
+        "disp": false,
         "width": "8",
         "collapse": false,
         "className": ""
