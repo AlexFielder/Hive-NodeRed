@@ -52,7 +52,8 @@
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
@@ -296,7 +297,7 @@
         "type": "function",
         "z": "1c1b1c29b5b8b2f4",
         "name": "return formatted articles",
-        "func": "let articles = msg.payload.articles;\nlet formattedArticles = articles.map(article => `${article.title} - ${article.source.name}`).join(\"\\n\\n\");\nmsg.payload = formattedArticles;\nreturn msg;\n",
+        "func": "let articles = msg.payload.articles;\n\nif (!articles || articles.length === 0) {\n    msg.payload = \"No recent news found for Dmitrijs Meiksans.\";\n} else {\n    let formattedArticles = articles.slice(0, 3).map(article => `${article.title} - ${article.source.name}`).join(\"\\n\\n\");\n    msg.payload = formattedArticles;\n}\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
