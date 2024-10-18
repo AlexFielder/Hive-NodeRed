@@ -13,8 +13,9 @@
         "tab": "d05445e29cdd76aa",
         "order": 1,
         "disp": true,
-        "width": 4,
-        "collapse": false
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "b79d28b42e0c4d25",
@@ -23,8 +24,9 @@
         "tab": "d05445e29cdd76aa",
         "order": 2,
         "disp": true,
-        "width": 4,
-        "collapse": false
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "c18e2c43b92f572c",
@@ -33,8 +35,9 @@
         "tab": "d05445e29cdd76aa",
         "order": 3,
         "disp": true,
-        "width": 4,
-        "collapse": false
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "d05445e29cdd76aa",
@@ -127,7 +130,7 @@
             "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
+            "dateFormat": "YYYY-MM-DD",
             "sizes": {
                 "sx": 48,
                 "sy": 48,
