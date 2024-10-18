@@ -1,1 +1,273 @@
-[]
+[
+    {
+        "id": "372284cb35a22db9",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c1b1c29b5b8b2f4",
+        "type": "tab",
+        "label": "Hivehoes Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a6b72d01bcd99b74",
+        "type": "ui_group",
+        "name": "Events/Communications from Incuhive",
+        "tab": "d05445e29cdd76aa",
+        "order": 1,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "b79d28b42e0c4d25",
+        "type": "ui_group",
+        "name": "Hive-Hoes in the News",
+        "tab": "d05445e29cdd76aa",
+        "order": 2,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "c18e2c43b92f572c",
+        "type": "ui_group",
+        "name": "Local Weather, Local Bus Timetables, Any Other Business",
+        "tab": "d05445e29cdd76aa",
+        "order": 3,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "d05445e29cdd76aa",
+        "type": "ui_tab",
+        "name": "Hivehoes Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "f66285f858e66cad",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e9eabc9f6bfeb7d1",
+        "type": "inject",
+        "z": "1c1b1c29b5b8b2f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Upcoming event: Workshop on Node-RED",
+        "payloadType": "str",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "dd7b124c36226f89"
+            ]
+        ]
+    },
+    {
+        "id": "dd7b124c36226f89",
+        "type": "ui_text",
+        "z": "1c1b1c29b5b8b2f4",
+        "group": "a6b72d01bcd99b74",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Incuhive Updates",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 450,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f5b2248d2f5a59e3",
+        "type": "inject",
+        "z": "1c1b1c29b5b8b2f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hive-Hoes mentioned in The Times!",
+        "payloadType": "str",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "f7748f2b66341b6d"
+            ]
+        ]
+    },
+    {
+        "id": "f7748f2b66341b6d",
+        "type": "ui_text",
+        "z": "1c1b1c29b5b8b2f4",
+        "group": "b79d28b42e0c4d25",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dmitrijs' Watch",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 450,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7b69e14b925f6c95",
+        "type": "inject",
+        "z": "1c1b1c29b5b8b2f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Local Weather: Sunny, 23°C",
+        "payloadType": "str",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "7ae6d3d13420bf23"
+            ]
+        ]
+    },
+    {
+        "id": "7ae6d3d13420bf23",
+        "type": "ui_text",
+        "z": "1c1b1c29b5b8b2f4",
+        "group": "c18e2c43b92f572c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Local Updates",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 450,
+        "y": 300,
+        "wires": []
+    }
+]
