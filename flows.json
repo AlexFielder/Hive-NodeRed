@@ -1,13 +1,5 @@
 [
     {
-        "id": "372284cb35a22db9",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "1c1b1c29b5b8b2f4",
         "type": "tab",
         "label": "Hivehoes Dashboard",
@@ -192,24 +184,24 @@
         "id": "f5b2248d2f5a59e3",
         "type": "inject",
         "z": "1c1b1c29b5b8b2f4",
-        "name": "",
+        "name": "Trigger NewsAPI Call",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "10",
+        "repeat": "86400",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Hive-Hoes mentioned in The Times!",
+        "payload": "Hive-Hoes Trigger NewsAPI Call!",
         "payloadType": "str",
-        "x": 160,
+        "x": 210,
         "y": 200,
         "wires": [
             [
-                "f7748f2b66341b6d"
+                "76cd4f1dd752e61a"
             ]
         ]
     },
@@ -225,7 +217,12 @@
         "label": "Dmitrijs' Watch",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 450,
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1240,
         "y": 200,
         "wires": []
     },
@@ -269,5 +266,49 @@
         "x": 450,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "76cd4f1dd752e61a",
+        "type": "http request",
+        "z": "1c1b1c29b5b8b2f4",
+        "name": "Request search from the News API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://newsapi.org/v2/everything?q=dmitrijs%20meiksans&from=2024-09-18&sortBy=publishedAt&apiKey=7dcbe92111ff4fecb27fffbe5ca9c0d9",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "1f37d1478465dfb9"
+            ]
+        ]
+    },
+    {
+        "id": "1f37d1478465dfb9",
+        "type": "function",
+        "z": "1c1b1c29b5b8b2f4",
+        "name": "return formatted articles",
+        "func": "let articles = msg.payload.articles;\nlet formattedArticles = articles.map(article => `${article.title} - ${article.source.name}`).join(\"\\n\\n\");\nmsg.payload = formattedArticles;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "f7748f2b66341b6d"
+            ]
+        ]
     }
 ]
