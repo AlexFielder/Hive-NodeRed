@@ -217,7 +217,7 @@
         "name": "",
         "label": "Dmitrijs' Watch",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "col-center",
         "className": "",
         "style": false,
         "font": "",
