@@ -7,6 +7,42 @@
         "info": ""
     },
     {
+        "id": "c97b5b2750113472",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3c012808d6b397e2",
+        "type": "group",
+        "z": "c97b5b2750113472",
+        "style": {
+            "stroke": "#b2b3bd",
+            "stroke-opacity": "1",
+            "fill": "#f2f3fb",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#32333b"
+        },
+        "nodes": [
+            "5ff0902202c21e85",
+            "993ffc096c3e8089",
+            "3bbb68c2dc2a0f5c",
+            "580210c585730f97",
+            "362ec9c482688cf6",
+            "b9f2f83a330140ca",
+            "6116c1efc3f7f682",
+            "01e7066b3ff012e7"
+        ],
+        "x": 194,
+        "y": 139,
+        "w": 532,
+        "h": 642
+    },
+    {
         "id": "f66285f858e66cad",
         "type": "ui_base",
         "theme": {
@@ -409,5 +445,205 @@
         "x": 1290,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "5ff0902202c21e85",
+        "type": "inject",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Inject the sample data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"timestamp\":\"2024-06-17T10:00:00Z\",\"temperature\":298.15},{\"timestamp\":\"2024-06-17T11:00:00Z\",\"temperature\":299.15},{\"timestamp\":\"2024-06-17T10:30:00Z\",\"temperature\":300.15},{\"timestamp\":\"2024-06-17T10:15:00Z\",\"temperature\":301.15},{\"timestamp\":\"2024-06-17T10:45:00Z\",\"temperature\":303.15},{\"timestamp\":\"2024-06-18T09:00:00Z\",\"temperature\":297.15},{\"timestamp\":\"2024-06-18T10:00:00Z\",\"temperature\":300.15},{\"timestamp\":\"2024-06-18T11:00:00Z\",\"temperature\":301.15},{\"timestamp\":\"2024-06-18T12:00:00Z\",\"temperature\":302.15},{\"timestamp\":\"2024-06-19T10:00:00Z\",\"temperature\":298.15},{\"timestamp\":\"2024-06-19T11:00:00Z\",\"temperature\":299.15}]",
+        "payloadType": "json",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "993ffc096c3e8089"
+            ]
+        ]
+    },
+    {
+        "id": "993ffc096c3e8089",
+        "type": "split",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Splits a message into a sequence of messages.",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "3bbb68c2dc2a0f5c"
+            ]
+        ]
+    },
+    {
+        "id": "3bbb68c2dc2a0f5c",
+        "type": "change",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Kelvin to celcius",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "payload.temperature - 273.15",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "580210c585730f97"
+            ]
+        ]
+    },
+    {
+        "id": "580210c585730f97",
+        "type": "switch",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Routing message sequence based on condition",
+        "property": "payload.timestamp",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "2024-06-17",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "01e7066b3ff012e7"
+            ]
+        ]
+    },
+    {
+        "id": "362ec9c482688cf6",
+        "type": "debug",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b9f2f83a330140ca",
+        "type": "join",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Calculating the  the average of temperature",
+        "mode": "reduce",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "$A+ payload.temperature",
+        "reduceInit": "0",
+        "reduceInitType": "num",
+        "reduceFixup": "$A/$N",
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "362ec9c482688cf6"
+            ]
+        ]
+    },
+    {
+        "id": "6116c1efc3f7f682",
+        "type": "split",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Splits a message into a sequence of messages.",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 500,
+        "y": 580,
+        "wires": [
+            [
+                "b9f2f83a330140ca"
+            ]
+        ]
+    },
+    {
+        "id": "01e7066b3ff012e7",
+        "type": "join",
+        "z": "c97b5b2750113472",
+        "g": "3c012808d6b397e2",
+        "name": "Creating new array by combining message sequence",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 500,
+        "y": 500,
+        "wires": [
+            [
+                "6116c1efc3f7f682"
+            ]
+        ]
     }
 ]
