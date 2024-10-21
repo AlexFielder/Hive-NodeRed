@@ -205,7 +205,7 @@
         "y": 200,
         "wires": [
             [
-                "76cd4f1dd752e61a"
+                "e05a3cd51a8ec965"
             ]
         ]
     },
@@ -226,7 +226,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1240,
+        "x": 1680,
         "y": 200,
         "wires": []
     },
@@ -279,7 +279,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://newsapi.org/v2/everything?q=dmitrijs%20meiksans&from=2024-09-18&sortBy=publishedAt&apiKey=7dcbe92111ff4fecb27fffbe5ca9c0d9",
+        "url": "{{msg.url}}",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -287,7 +287,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 520,
+        "x": 960,
         "y": 200,
         "wires": [
             [
@@ -307,11 +307,31 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
+        "x": 1290,
         "y": 200,
         "wires": [
             [
                 "f7748f2b66341b6d"
+            ]
+        ]
+    },
+    {
+        "id": "e05a3cd51a8ec965",
+        "type": "function",
+        "z": "1c1b1c29b5b8b2f4",
+        "name": "Set the search date and url to 30 days previous",
+        "func": "// Calculate the date 30 days ago\nlet today = new Date();\nlet thirtyDaysAgo = new Date();\nthirtyDaysAgo.setDate(today.getDate() - 30);\n\n// Format the date as YYYY-MM-DD\nlet fromDate = thirtyDaysAgo.toISOString().split('T')[0];\n\n// Add the 'from' date to the query string in msg.url\nmsg.url = `https://newsapi.org/v2/everything?q=dmitrijs%20meiksans&from=${fromDate}&sortBy=publishedAt&apiKey=7dcbe92111ff4fecb27fffbe5ca9c0d9`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "76cd4f1dd752e61a"
             ]
         ]
     }
