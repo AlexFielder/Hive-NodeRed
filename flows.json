@@ -1,50 +1,10 @@
 [
     {
-        "id": "1c1b1c29b5b8b2f4",
+        "id": "1d1495766da04adf",
         "type": "tab",
         "label": "Hivehoes Dashboard",
         "disabled": false,
         "info": ""
-    },
-    {
-        "id": "a6b72d01bcd99b74",
-        "type": "ui_group",
-        "name": "Events/Communications from Incuhive",
-        "tab": "d05445e29cdd76aa",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "b79d28b42e0c4d25",
-        "type": "ui_group",
-        "name": "Hive-Hoes in the News",
-        "tab": "d05445e29cdd76aa",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c18e2c43b92f572c",
-        "type": "ui_group",
-        "name": "Local Weather, Local Bus Timetables, Any Other Business",
-        "tab": "d05445e29cdd76aa",
-        "order": 3,
-        "disp": true,
-        "width": "10",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d05445e29cdd76aa",
-        "type": "ui_tab",
-        "name": "Hivehoes Dashboard",
-        "icon": "dashboard",
-        "order": 1
     },
     {
         "id": "f66285f858e66cad",
@@ -144,9 +104,49 @@
         }
     },
     {
-        "id": "e9eabc9f6bfeb7d1",
+        "id": "a6b72d01bcd99b74",
+        "type": "ui_group",
+        "name": "Events/Comms from Incuhive",
+        "tab": "d05445e29cdd76aa",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b79d28b42e0c4d25",
+        "type": "ui_group",
+        "name": "Hive-Hoes in the News",
+        "tab": "d05445e29cdd76aa",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c18e2c43b92f572c",
+        "type": "ui_group",
+        "name": "Local Weather, AOB",
+        "tab": "d05445e29cdd76aa",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d05445e29cdd76aa",
+        "type": "ui_tab",
+        "name": "Hivehoes Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "63df6db53ad92ac6",
         "type": "inject",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "name": "",
         "props": [
             {
@@ -164,14 +164,14 @@
         "y": 100,
         "wires": [
             [
-                "dd7b124c36226f89"
+                "3a36f5c7519eaaf3"
             ]
         ]
     },
     {
-        "id": "dd7b124c36226f89",
+        "id": "3a36f5c7519eaaf3",
         "type": "ui_text",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "group": "a6b72d01bcd99b74",
         "order": 1,
         "width": 0,
@@ -185,9 +185,9 @@
         "wires": []
     },
     {
-        "id": "f5b2248d2f5a59e3",
+        "id": "90698cb734aed7d5",
         "type": "inject",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "name": "Trigger NewsAPI Call",
         "props": [
             {
@@ -205,14 +205,14 @@
         "y": 200,
         "wires": [
             [
-                "e05a3cd51a8ec965"
+                "637dc0d6a04dca40"
             ]
         ]
     },
     {
-        "id": "f7748f2b66341b6d",
+        "id": "20b23ef974880b8d",
         "type": "ui_text",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "group": "b79d28b42e0c4d25",
         "order": 1,
         "width": 0,
@@ -231,9 +231,9 @@
         "wires": []
     },
     {
-        "id": "7b69e14b925f6c95",
+        "id": "b16fe21773418b20",
         "type": "inject",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "name": "",
         "props": [
             {
@@ -251,14 +251,14 @@
         "y": 300,
         "wires": [
             [
-                "7ae6d3d13420bf23"
+                "de7f5c6baa542e82"
             ]
         ]
     },
     {
-        "id": "7ae6d3d13420bf23",
+        "id": "de7f5c6baa542e82",
         "type": "ui_text",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "group": "c18e2c43b92f572c",
         "order": 1,
         "width": 0,
@@ -272,9 +272,9 @@
         "wires": []
     },
     {
-        "id": "76cd4f1dd752e61a",
+        "id": "e06c302bacd36985",
         "type": "http request",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "name": "Request search from the News API",
         "method": "GET",
         "ret": "obj",
@@ -291,14 +291,14 @@
         "y": 200,
         "wires": [
             [
-                "1f37d1478465dfb9"
+                "39a61fe15aa9090e"
             ]
         ]
     },
     {
-        "id": "1f37d1478465dfb9",
+        "id": "39a61fe15aa9090e",
         "type": "function",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "name": "return formatted articles",
         "func": "let articles = msg.payload.articles;\n\nif (!articles || articles.length === 0) {\n    msg.payload = \"No recent news found for Dmitrijs Meiksans.\";\n} else {\n    let formattedArticles = articles.slice(0, 3).map(article => `${article.title} - ${article.source.name}`).join(\"\\n\\n\");\n    msg.payload = formattedArticles;\n}\n\nreturn msg;\n\n",
         "outputs": 1,
@@ -311,14 +311,14 @@
         "y": 200,
         "wires": [
             [
-                "f7748f2b66341b6d"
+                "20b23ef974880b8d"
             ]
         ]
     },
     {
-        "id": "e05a3cd51a8ec965",
+        "id": "637dc0d6a04dca40",
         "type": "function",
-        "z": "1c1b1c29b5b8b2f4",
+        "z": "1d1495766da04adf",
         "name": "Set the search date and url to 30 days previous",
         "func": "// Calculate the date 30 days ago\nlet today = new Date();\nlet thirtyDaysAgo = new Date();\nthirtyDaysAgo.setDate(today.getDate() - 30);\n\n// Format the date as YYYY-MM-DD\nlet fromDate = thirtyDaysAgo.toISOString().split('T')[0];\n\n// Add the 'from' date to the query string in msg.url\nmsg.url = `https://newsapi.org/v2/everything?q=dmitrijs%20meiksans&from=${fromDate}&sortBy=publishedAt&apiKey=7dcbe92111ff4fecb27fffbe5ca9c0d9`;\n\nreturn msg;\n",
         "outputs": 1,
@@ -331,7 +331,34 @@
         "y": 200,
         "wires": [
             [
-                "76cd4f1dd752e61a"
+                "e06c302bacd36985"
+            ]
+        ]
+    },
+    {
+        "id": "eb1862f39b4c5ce9",
+        "type": "ui_button",
+        "z": "1d1495766da04adf",
+        "name": "Manual NewsAPI Trigger",
+        "group": "b79d28b42e0c4d25",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Get Latest News",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-newspaper-o",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "637dc0d6a04dca40"
             ]
         ]
     }
