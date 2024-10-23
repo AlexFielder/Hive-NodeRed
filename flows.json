@@ -528,7 +528,7 @@
             }
         ],
         "repeat": "3600",
-        "crontab": "30 08-17 * * *",
+        "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
