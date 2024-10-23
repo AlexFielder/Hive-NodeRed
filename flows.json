@@ -312,7 +312,8 @@
         "y": 200,
         "wires": [
             [
-                "e1f62c8048509757"
+                "e1f62c8048509757",
+                "293a0016bc9dd515"
             ]
         ]
     },
@@ -336,7 +337,8 @@
         "y": 200,
         "wires": [
             [
-                "ae098a6105fabf66"
+                "ae098a6105fabf66",
+                "b231307b30270b4a"
             ]
         ]
     },
@@ -345,7 +347,7 @@
         "type": "function",
         "z": "5f8dd6449c27116e",
         "name": "return formatted articles",
-        "func": "let articles = msg.payload.articles;\n\nif (!articles || articles.length === 0) {\n    msg.payload = \"No recent news found for Dmitrijs Meiksans.\";\n} else {\n    let formattedArticles = articles.slice(0, 3).map(article => `${article.title} - ${article.source.name}`).join(\"\n\n\");\n    msg.payload = formattedArticles;\n}\n\nreturn msg;\n\n",
+        "func": "let articles = msg.payload.articles;\n\nif (!articles || articles.length === 0) {\n    msg.payload = \"No recent news found for Dmitrijs Meiksans.\";\n} else {\n    let formattedArticles = articles.slice(0, 3).map(article => `${article.title} - ${article.source.name}`).join(\"\");\n    msg.payload = formattedArticles;\n}\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -356,7 +358,8 @@
         "y": 200,
         "wires": [
             [
-                "938df3e0ab13b761"
+                "938df3e0ab13b761",
+                "51f7e577993a8744"
             ]
         ]
     },
@@ -659,5 +662,56 @@
                 "ca2ffefda69853c0"
             ]
         ]
+    },
+    {
+        "id": "293a0016bc9dd515",
+        "type": "debug",
+        "z": "5f8dd6449c27116e",
+        "name": "debug search string",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "51f7e577993a8744",
+        "type": "debug",
+        "z": "5f8dd6449c27116e",
+        "name": "debug formatted articles",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b231307b30270b4a",
+        "type": "debug",
+        "z": "5f8dd6449c27116e",
+        "name": "debug search result(s)",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 260,
+        "wires": []
     }
 ]
