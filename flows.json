@@ -174,9 +174,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "payload"
             }
         ],
         "repeat": "5",
