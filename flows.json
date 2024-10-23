@@ -112,17 +112,6 @@
         "hidden": false
     },
     {
-        "id": "b79d28b42e0c4d25",
-        "type": "ui_group",
-        "name": "Hive-Hoes in the News",
-        "tab": "54d43040f98325be",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "0a061a8742a473e9",
         "type": "ui_group",
         "name": "HR Violation Counter",
@@ -152,6 +141,17 @@
         "order": 6,
         "disp": true,
         "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4853407f0927c969",
+        "type": "ui_group",
+        "name": "Hive Hoes in the news",
+        "tab": "54d43040f98325be",
+        "order": 5,
+        "disp": true,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -619,7 +619,7 @@
         "id": "ca2ffefda69853c0",
         "type": "ui_text",
         "z": "5f8dd6449c27116e",
-        "group": "b79d28b42e0c4d25",
+        "group": "4853407f0927c969",
         "order": 1,
         "width": 0,
         "height": 0,
