@@ -123,28 +123,6 @@
         "hidden": false
     },
     {
-        "id": "12cb0d26de10d3fc",
-        "type": "ui_group",
-        "name": "Updates",
-        "tab": "54d43040f98325be",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8ab8a10d3d407df3",
-        "type": "ui_group",
-        "name": "AOB",
-        "tab": "54d43040f98325be",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "a6b72d01bcd99b74",
         "type": "ui_group",
         "name": "Events/Communications from Incuhive",
