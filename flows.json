@@ -112,17 +112,6 @@
         "hidden": false
     },
     {
-        "id": "a6b72d01bcd99b74",
-        "type": "ui_group",
-        "name": "Comms from Incuhive",
-        "tab": "54d43040f98325be",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "b79d28b42e0c4d25",
         "type": "ui_group",
         "name": "Hive-Hoes in the News",
@@ -141,6 +130,39 @@
         "order": 3,
         "disp": true,
         "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0a061a8742a473e9",
+        "type": "ui_group",
+        "name": "HR Violation Counter",
+        "tab": "54d43040f98325be",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "727082c0c5997432",
+        "type": "ui_group",
+        "name": "Dmitrijs Watch",
+        "tab": "54d43040f98325be",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2163e22a6383fcd",
+        "type": "ui_group",
+        "name": "Comms from Incuhive",
+        "tab": "54d43040f98325be",
+        "order": 6,
+        "disp": true,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -173,7 +195,7 @@
         "id": "c0ad6a23f0233940",
         "type": "ui_text",
         "z": "5f8dd6449c27116e",
-        "group": "a6b72d01bcd99b74",
+        "group": "c2163e22a6383fcd",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -219,7 +241,7 @@
         "id": "938df3e0ab13b761",
         "type": "ui_text",
         "z": "5f8dd6449c27116e",
-        "group": "b79d28b42e0c4d25",
+        "group": "727082c0c5997432",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -232,7 +254,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1680,
+        "x": 1540,
         "y": 200,
         "wires": []
     },
@@ -253,8 +275,8 @@
         "topic": "",
         "payload": "Local Weather: Sunny, 23°C",
         "payloadType": "str",
-        "x": 160,
-        "y": 300,
+        "x": 180,
+        "y": 740,
         "wires": [
             [
                 "9bbf56567123eb88"
@@ -273,8 +295,8 @@
         "label": "Local Updates",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 450,
-        "y": 300,
+        "x": 470,
+        "y": 740,
         "wires": []
     },
     {
@@ -360,8 +382,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 210,
-        "y": 400,
+        "x": 170,
+        "y": 280,
         "wires": [
             [
                 "14c68f47f62c62fb"
@@ -385,8 +407,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 200,
-        "y": 500,
+        "x": 210,
+        "y": 360,
         "wires": [
             [
                 "8428ca0ca79d03a0"
@@ -404,8 +426,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 500,
+        "x": 540,
+        "y": 360,
         "wires": [
             [
                 "881d0a4afc6e9ccc"
@@ -416,7 +438,7 @@
         "id": "881d0a4afc6e9ccc",
         "type": "ui_text",
         "z": "5f8dd6449c27116e",
-        "group": "c18e2c43b92f572c",
+        "group": "0a061a8742a473e9",
         "order": 2,
         "width": 4,
         "height": 1,
@@ -424,8 +446,13 @@
         "label": "HR Violation Counter",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 810,
-        "y": 500,
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 820,
+        "y": 360,
         "wires": []
     },
     {
@@ -448,8 +475,8 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 210,
-        "y": 600,
+        "x": 220,
+        "y": 460,
         "wires": [
             [
                 "c380d1fe4701c4ea"
@@ -468,8 +495,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 600,
+        "x": 530,
+        "y": 460,
         "wires": [
             [
                 "881d0a4afc6e9ccc"
@@ -493,8 +520,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 200,
-        "y": 700,
+        "x": 210,
+        "y": 560,
         "wires": [
             [
                 "c577d9cff07d291c"
@@ -513,8 +540,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 700,
+        "x": 540,
+        "y": 560,
         "wires": [
             [
                 "d0d5d383c67e3763"
@@ -538,8 +565,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 810,
-        "y": 700,
+        "x": 820,
+        "y": 560,
         "wires": []
     },
     {
@@ -554,8 +581,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 800,
+        "x": 540,
+        "y": 660,
         "wires": [
             [
                 "d0d5d383c67e3763"
@@ -582,12 +609,33 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 230,
-        "y": 800,
+        "x": 240,
+        "y": 660,
         "wires": [
             [
                 "0480778885129988"
             ]
         ]
+    },
+    {
+        "id": "ca2ffefda69853c0",
+        "type": "ui_text",
+        "z": "5f8dd6449c27116e",
+        "group": "b79d28b42e0c4d25",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fire Warden pension saga",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 40,
+        "wires": []
     }
 ]
