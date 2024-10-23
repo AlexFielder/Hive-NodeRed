@@ -429,7 +429,7 @@
         "id": "9f1ad8426d0b9d2e",
         "type": "ui_text",
         "z": "1c1b1c29b5b8b2f4",
-        "group": "db94374509f5c961",
+        "group": "c18e2c43b92f572c",
         "order": 2,
         "width": 4,
         "height": 1,
@@ -465,6 +465,7 @@
         "payload": "reset",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 210,
         "y": 600,
         "wires": [
