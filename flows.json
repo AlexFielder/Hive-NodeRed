@@ -104,17 +104,6 @@
         }
     },
     {
-        "id": "db94374509f5c961",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "54d43040f98325be",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "54d43040f98325be",
         "type": "ui_tab",
         "name": "Hive Hoes Dashboard",
@@ -126,7 +115,7 @@
         "id": "a6b72d01bcd99b74",
         "type": "ui_group",
         "name": "Comms from Incuhive",
-        "tab": "d05445e29cdd76aa",
+        "tab": "54d43040f98325be",
         "order": 1,
         "disp": true,
         "width": "8",
@@ -137,7 +126,7 @@
         "id": "b79d28b42e0c4d25",
         "type": "ui_group",
         "name": "Hive-Hoes in the News",
-        "tab": "d05445e29cdd76aa",
+        "tab": "54d43040f98325be",
         "order": 2,
         "disp": true,
         "width": "8",
@@ -148,19 +137,12 @@
         "id": "c18e2c43b92f572c",
         "type": "ui_group",
         "name": "Local Weather, AOB",
-        "tab": "d05445e29cdd76aa",
+        "tab": "54d43040f98325be",
         "order": 3,
         "disp": true,
         "width": "10",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "d05445e29cdd76aa",
-        "type": "ui_tab",
-        "name": "Hivehoes Dashboard",
-        "icon": "dashboard",
-        "order": 1
     },
     {
         "id": "64fcb034cff52a79",
@@ -199,6 +181,11 @@
         "label": "Incuhive Updates",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 450,
         "y": 100,
         "wires": []
