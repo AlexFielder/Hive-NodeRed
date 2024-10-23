@@ -365,7 +365,7 @@
         "type": "ui_button",
         "z": "5f8dd6449c27116e",
         "name": "Manual NewsAPI Trigger",
-        "group": "b79d28b42e0c4d25",
+        "group": "727082c0c5997432",
         "order": 2,
         "width": 4,
         "height": 1,
@@ -379,6 +379,7 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 170,
         "y": 280,
         "wires": [
@@ -634,5 +635,29 @@
         "x": 500,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "892539e2f1f24387",
+        "type": "inject",
+        "z": "5f8dd6449c27116e",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "ca2ffefda69853c0"
+            ]
+        ]
     }
 ]
