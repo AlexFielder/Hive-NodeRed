@@ -460,6 +460,7 @@
         "payload": "reset",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 210,
         "y": 600,
         "wires": [
@@ -472,14 +473,15 @@
         "id": "c380d1fe4701c4ea",
         "type": "function",
         "z": "5f8dd6449c27116e",
-        "name": "Reset Counter",
+        "name": "Reset HR Violation Counter",
         "func": "flow.set('days_since_hr_violation', 0);\nmsg.payload = 'Days since last HR violation: 0';\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
+        "x": 520,
         "y": 600,
         "wires": [
             [
@@ -519,6 +521,7 @@
         "name": "Update Door Slam Counter",
         "func": "if (!flow.get('hours_since_door_slammed')) {\n    flow.set('hours_since_door_slammed', 0);\n}\n\nlet currentCount = flow.get('hours_since_door_slammed');\ncurrentCount += 1;\nflow.set('hours_since_door_slammed', currentCount);\nmsg.payload = `Hours since door slammed: ${currentCount}`;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -543,8 +546,61 @@
         "label": "Door Slam Counter",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 810,
         "y": 700,
         "wires": []
+    },
+    {
+        "id": "0480778885129988",
+        "type": "function",
+        "z": "5f8dd6449c27116e",
+        "name": "Reset Door Slam Counter",
+        "func": "flow.set('hours_since_door_slammed', 0);\nmsg.payload = 'Hours since last Door slammed: 0';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 800,
+        "wires": [
+            [
+                "d0d5d383c67e3763"
+            ]
+        ]
+    },
+    {
+        "id": "6a98c19fd254c151",
+        "type": "ui_button",
+        "z": "5f8dd6449c27116e",
+        "name": "",
+        "group": "c18e2c43b92f572c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset Door Slam Counter",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "reset",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 800,
+        "wires": [
+            [
+                "0480778885129988"
+            ]
+        ]
     }
 ]
