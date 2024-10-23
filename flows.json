@@ -167,6 +167,36 @@
         "className": ""
     },
     {
+        "id": "a54d0c2875fcf1be",
+        "type": "ui_spacer",
+        "z": "5f8dd6449c27116e",
+        "name": "spacer",
+        "group": "d5d64d346a79f027",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "cfe238bf6dd3eb55",
+        "type": "ui_spacer",
+        "z": "5f8dd6449c27116e",
+        "name": "spacer",
+        "group": "727082c0c5997432",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8fa6c8c7edae1115",
+        "type": "ui_spacer",
+        "z": "5f8dd6449c27116e",
+        "name": "spacer",
+        "group": "0a061a8742a473e9",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "64fcb034cff52a79",
         "type": "inject",
         "z": "5f8dd6449c27116e",
