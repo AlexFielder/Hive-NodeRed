@@ -163,6 +163,9 @@
         "props": [
             {
                 "p": "payload"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "5",
@@ -170,7 +173,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Upcoming event: Workshop on Node-RED",
+        "payload": "Alex on leave from Thursday until November 4th",
         "payloadType": "str",
         "x": 160,
         "y": 100,
